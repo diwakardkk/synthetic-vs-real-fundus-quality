@@ -1,0 +1,36 @@
+{
+  "hq": {
+    "n": 931,
+    "referable": 427
+  },
+  "lq_referable": 435,
+  "pair_level": "patient",
+  "strata": {
+    "lq_any": {
+      "n": 1058,
+      "non_referable": 623,
+      "referable": 435,
+      "unstable": false
+    },
+    "lq_artifact": {
+      "n": 469,
+      "non_referable": 246,
+      "referable": 223,
+      "unstable": false
+    },
+    "lq_clarity": {
+      "n": 178,
+      "non_referable": 78,
+      "referable": 100,
+      "unstable": false
+    },
+    "lq_field": {
+      "n": 51,
+      "non_referable": 25,
+      "referable": 26,
+      "unstable": false
+    }
+  },
+  "warnings": [],
+  "within_eye_pairs": 101
+}

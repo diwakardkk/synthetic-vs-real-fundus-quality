@@ -1,0 +1,174 @@
+{
+  "selection": [
+    {
+      "config": "visionfm/lora",
+      "missed_per_1000_LQ": 8.5823754789272,
+      "note": "max HQ AUROC",
+      "prevalence": 0.05,
+      "selected_by": "clean_only",
+      "unnecessary_per_1000_LQ": 110.8079186730873
+    },
+    {
+      "config": "visionfm/lora",
+      "missed_per_1000_LQ": 17.1647509578544,
+      "note": "max HQ AUROC",
+      "prevalence": 0.1,
+      "selected_by": "clean_only",
+      "unnecessary_per_1000_LQ": 104.97592295345113
+    },
+    {
+      "config": "visionfm/lora",
+      "missed_per_1000_LQ": 34.3295019157088,
+      "note": "max HQ AUROC",
+      "prevalence": 0.2,
+      "selected_by": "clean_only",
+      "unnecessary_per_1000_LQ": 93.31193151417878
+    },
+    {
+      "config": "flair/ft",
+      "missed_per_1000_LQ": 8.045977011494255,
+      "note": "max observed LQ AUROC (upper bound)",
+      "prevalence": 0.05,
+      "selected_by": "oracle",
+      "unnecessary_per_1000_LQ": 130.63135366506148
+    },
+    {
+      "config": "flair/ft",
+      "missed_per_1000_LQ": 16.09195402298851,
+      "note": "max observed LQ AUROC (upper bound)",
+      "prevalence": 0.1,
+      "selected_by": "oracle",
+      "unnecessary_per_1000_LQ": 123.75601926163718
+    },
+    {
+      "config": "flair/ft",
+      "missed_per_1000_LQ": 32.18390804597702,
+      "note": "max observed LQ AUROC (upper bound)",
+      "prevalence": 0.2,
+      "selected_by": "oracle",
+      "unnecessary_per_1000_LQ": 110.00535045478861
+    },
+    {
+      "config": "visionfm/lora",
+      "missed_per_1000_LQ": 8.5823754789272,
+      "note": "max (HQ AUROC - predicted loss)",
+      "prevalence": 0.05,
+      "selected_by": "uniform",
+      "unnecessary_per_1000_LQ": 110.8079186730873
+    },
+    {
+      "config": "visionfm/lora",
+      "missed_per_1000_LQ": 17.1647509578544,
+      "note": "max (HQ AUROC - predicted loss)",
+      "prevalence": 0.1,
+      "selected_by": "uniform",
+      "unnecessary_per_1000_LQ": 104.97592295345113
+    },
+    {
+      "config": "visionfm/lora",
+      "missed_per_1000_LQ": 34.3295019157088,
+      "note": "max (HQ AUROC - predicted loss)",
+      "prevalence": 0.2,
+      "selected_by": "uniform",
+      "unnecessary_per_1000_LQ": 93.31193151417878
+    },
+    {
+      "config": "visionfm/lora",
+      "missed_per_1000_LQ": 8.5823754789272,
+      "note": "max (HQ AUROC - predicted loss)",
+      "prevalence": 0.05,
+      "selected_by": "realcal",
+      "unnecessary_per_1000_LQ": 110.8079186730873
+    },
+    {
+      "config": "visionfm/lora",
+      "missed_per_1000_LQ": 17.1647509578544,
+      "note": "max (HQ AUROC - predicted loss)",
+      "prevalence": 0.1,
+      "selected_by": "realcal",
+      "unnecessary_per_1000_LQ": 104.97592295345113
+    },
+    {
+      "config": "visionfm/lora",
+      "missed_per_1000_LQ": 34.3295019157088,
+      "note": "max (HQ AUROC - predicted loss)",
+      "prevalence": 0.2,
+      "selected_by": "realcal",
+      "unnecessary_per_1000_LQ": 93.31193151417878
+    },
+    {
+      "config": "visionfm/lora",
+      "missed_per_1000_LQ": 8.5823754789272,
+      "note": "max (HQ AUROC - predicted loss)",
+      "prevalence": 0.05,
+      "selected_by": "realcal_std",
+      "unnecessary_per_1000_LQ": 110.8079186730873
+    },
+    {
+      "config": "visionfm/lora",
+      "missed_per_1000_LQ": 17.1647509578544,
+      "note": "max (HQ AUROC - predicted loss)",
+      "prevalence": 0.1,
+      "selected_by": "realcal_std",
+      "unnecessary_per_1000_LQ": 104.97592295345113
+    },
+    {
+      "config": "visionfm/lora",
+      "missed_per_1000_LQ": 34.3295019157088,
+      "note": "max (HQ AUROC - predicted loss)",
+      "prevalence": 0.2,
+      "selected_by": "realcal_std",
+      "unnecessary_per_1000_LQ": 93.31193151417878
+    }
+  ],
+  "summary": [
+    {
+      "missed_max": 20.569867291178767,
+      "missed_median": 9.738485558157688,
+      "missed_min": 3.825136612021857,
+      "prevalence": 0.05,
+      "stratum": "HQ",
+      "unnecessary_median": 108.38293650793655
+    },
+    {
+      "missed_max": 41.139734582357534,
+      "missed_median": 19.476971116315376,
+      "missed_min": 7.650273224043714,
+      "prevalence": 0.1,
+      "stratum": "HQ",
+      "unnecessary_median": 102.67857142857147
+    },
+    {
+      "missed_max": 82.27946916471507,
+      "missed_median": 38.95394223263075,
+      "missed_min": 15.300546448087427,
+      "prevalence": 0.2,
+      "stratum": "HQ",
+      "unnecessary_median": 91.2698412698413
+    },
+    {
+      "missed_max": 18.429118773946364,
+      "missed_median": 11.762452107279694,
+      "missed_min": 7.011494252873557,
+      "prevalence": 0.05,
+      "stratum": "LQ",
+      "unnecessary_median": 116.1449973247726
+    },
+    {
+      "missed_max": 36.85823754789273,
+      "missed_median": 23.52490421455939,
+      "missed_min": 14.022988505747113,
+      "prevalence": 0.1,
+      "stratum": "LQ",
+      "unnecessary_median": 110.03210272873194
+    },
+    {
+      "missed_max": 73.71647509578546,
+      "missed_median": 47.04980842911878,
+      "missed_min": 28.045977011494227,
+      "prevalence": 0.2,
+      "stratum": "LQ",
+      "unnecessary_median": 97.8063135366506
+    }
+  ]
+}

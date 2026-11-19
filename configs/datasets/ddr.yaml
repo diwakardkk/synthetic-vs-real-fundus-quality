@@ -1,0 +1,17 @@
+# DDR (external 3). Layout NOT yet verified (download pending). Expected after
+#   cat DDR-dataset.zip.0* > DDR-dataset.zip && unzip DDR-dataset.zip :
+#   <root>/DDR-dataset/DR_grading/{train,valid,test}/*.jpg
+#   <root>/DDR-dataset/DR_grading/{train,valid,test}.txt     lines: "<file name> <grade>"
+# The loader searches below data_root/DDR for a folder named grading_dir_name.
+name: ddr
+root: DDR
+grading_dir_name: DR_grading
+split_names: {train: train, valid: valid, test: test}
+task: binary
+referable_min_grade: 2
+ungradable_grade: 5
+n_classes: 2
+class_names: [non_referable, referable]
+use_official_valid_as: none     # none | train | test
+patient_regex: null             # e.g. '^(?P<patient>\d+-\d+)-\d+$' if file names encode patients
+image_extensions: [".jpg", ".jpeg", ".png", ".JPG"]

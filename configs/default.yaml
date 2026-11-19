@@ -1,0 +1,127 @@
+# Global settings for RealCal. Every value can be overridden on the command line with
+#   --config-override key.sub=value
+project: realcal
+dev_dataset: deepdrid
+external_datasets: [fives, mshf, ddr]
+
+preprocess:
+  fov_threshold: 10          # grey level (0-255) for field-of-view detection
+  sizes: [224, 448]
+  shard_size: 500            # images per preprocessing job
+  format: png                # lossless cache
+
+splits:
+  n_folds: 5
+  val_fraction: 0.20         # DeepDRiD: fraction of training patients used for validation
+  external_val_fraction: 0.15
+  seed: 20251117
+
+train:
+  sizes_main: [224]
+  seeds: [0, 1, 2]
+  optimizer: adamw
+  weight_decay: 0.05
+  batch_size: 32
+  max_epochs: 50
+  warmup_epochs: 5
+  patience: 10
+  lr: {lp: 1.0e-3, lora: 1.0e-4, ft: 1.0e-5}
+  head_lr_mult_ft: 10.0
+  lora: {rank: 8, alpha: 16, dropout: 0.1}
+  class_weighted: true
+  augment: {hflip: true, vflip: true, rotate_deg: 15}
+  amp: true
+  compile: false
+  num_workers_max: 8
+  grad_clip: 1.0
+  modes: [lp, lora, ft]
+
+threshold:
+  target_specificity: 0.90
+  multiclass_negative_class: 0  # FIVES: score = 1 - P(normal) for sensitivity/specificity
+
+corruptions_eval_sizes: [224]
+
+features:
+  batch_size: 128
+  # encoders used for analysis only (never classifiers)
+  level2_encoder: convnext_base
+  qdet_encoder: dinov2
+
+calibration:
+  primary_metric: auroc
+  lambda_grid_n: 10            # log-spaced values in addition to 0
+  lambda_grid_min: 1.0e-4
+  lambda_grid_max: 1.0
+  level1b_bootstrap: 1000
+  mmd_max_per_set: 400          # images per set used in MMD kernel means
+  realism_folds: 5
+  lofo: true
+
+stats:
+  n_boot: 2000
+  n_boot_inner: 1              # patient resamples inside each backbone resample (two-level)
+  ci: 0.95
+  alpha: 0.05
+  zones: {not_valid_upper: 0.5, valid_lower: 0.7}
+  ece_bins: 15
+  label_noise_rates: [0.05, 0.10, 0.15]
+  label_noise_reps: 200
+  n_jobs: -1
+
+viability:
+  min_lq_referable: 50
+  min_stratum_class: 20
+  min_eye_pairs: 30
+
+clinical:
+  prevalences: [0.05, 0.10, 0.20]
+  dca_pt_min: 0.02
+  dca_pt_max: 0.30
+  dca_n: 57
+
+sensitivity:
+  s448_modes: [lp, lora]
+  s448_include_ft: false
+  aug_backbones: [dinov2, resnet50, retfound]
+  aug_modes: [lp, lora, ft]
+  aug_ops: [defocus, motion, gaussian_noise, colour_cast, gamma_shift, contrast_loss, jpeg]
+  aug_prob: 0.5
+
+external:
+  fives_min_lq_test: 30          # below this, also run the 5-fold CV variant (secondary)
+  ddr_max_gradable_eval: 2000    # gradable DDR images scored by DeepDRiD models (entropy analysis)
+  ddr_entropy_models: {folds: [0], seeds: [0]}
+  confident_threshold: 0.9
+
+power:
+  n_sim: 2000
+  rho_grid: [0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  diff_grid: [0.1, 0.2, 0.3, 0.4, 0.5]
+
+scheduler:
+  safety_margin: 0.15
+  max_jobs_per_gpu: 8
+  max_attempts: 3
+  poll_seconds: 2.0
+  cpu_workers: -1                # -1 = all cores
+
+figures:
+  single_col_mm: 88
+  double_col_mm: 180
+  font_size: 7.5
+  dpi: 300
+
+# Applied on top of everything when --smoke is given
+smoke:
+  backbones: [resnet50, dinov2]
+  folds: [0]
+  seeds: [0]
+  max_epochs: 2
+  warmup_epochs: 1
+  n_images: 32
+  n_conditions: 3
+  n_boot: 50
+  label_noise_reps: 10
+  level1b_bootstrap: 20
+  power_n_sim: 50

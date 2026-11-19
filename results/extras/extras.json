@@ -1,0 +1,573 @@
+{
+ "A_B_meta_analysis": {
+  "note": "DDR replication is evaluated on DeepDRiD test images, so it is not independent of the internal analysis; the 'independent' pool is primary.",
+  "pooled": [
+   {
+    "method": "B1_uniform",
+    "quantity": "rho",
+    "pool": "independent (DeepDRiD + FIVES)",
+    "k": 2,
+    "estimate": 0.1154764211284381,
+    "ci_lo": -0.3415184678908755,
+    "ci_hi": 0.5283101919402635,
+    "I2": 0.0,
+    "per_dataset": "deepdrid 0.11 (-0.51 to 0.61); fives 0.12 (-0.46 to 0.72)"
+   },
+   {
+    "method": "B1_uniform",
+    "quantity": "rho",
+    "pool": "all three (incl. DDR replication)",
+    "k": 3,
+    "estimate": 0.2540945523480386,
+    "ci_lo": -0.13024929310284566,
+    "ci_hi": 0.5720493293532154,
+    "I2": 0.0,
+    "per_dataset": "deepdrid 0.11 (-0.51 to 0.61); fives 0.12 (-0.46 to 0.72); ddr_repl 0.52 (-0.17 to 0.84)"
+   },
+   {
+    "method": "B2_published",
+    "quantity": "rho",
+    "pool": "independent (DeepDRiD + FIVES)",
+    "k": 2,
+    "estimate": 0.21542927343429036,
+    "ci_lo": -0.2754357855400879,
+    "ci_hi": 0.6171893787611358,
+    "I2": 0.0,
+    "per_dataset": "deepdrid 0.24 (-0.46 to 0.71); fives 0.19 (-0.45 to 0.75)"
+   },
+   {
+    "method": "B2_published",
+    "quantity": "rho",
+    "pool": "all three (incl. DDR replication)",
+    "k": 3,
+    "estimate": 0.3661949395895984,
+    "ci_lo": -0.02092251820723758,
+    "ci_hi": 0.6578245116983241,
+    "I2": 0.0,
+    "per_dataset": "deepdrid 0.24 (-0.46 to 0.71); fives 0.19 (-0.45 to 0.75); ddr_repl 0.60 (-0.08 to 0.86)"
+   },
+   {
+    "method": "B2_published",
+    "quantity": "diff_vs_B1",
+    "pool": "independent (DeepDRiD + FIVES)",
+    "k": 2,
+    "estimate": 0.084633888982985,
+    "ci_lo": -0.0951272037376449,
+    "ci_hi": 0.2643949817036149,
+    "I2": 0.0,
+    "per_dataset": "deepdrid 0.13 (-0.24 to 0.49); fives 0.07 (-0.13 to 0.28)"
+   },
+   {
+    "method": "B2_published",
+    "quantity": "diff_vs_B1",
+    "pool": "all three (incl. DDR replication)",
+    "k": 3,
+    "estimate": 0.08396372476343154,
+    "ci_lo": -0.07362129833017235,
+    "ci_hi": 0.24154874785703545,
+    "I2": 0.0,
+    "per_dataset": "deepdrid 0.13 (-0.24 to 0.49); fives 0.07 (-0.13 to 0.28); ddr_repl 0.08 (-0.24 to 0.41)"
+   },
+   {
+    "method": "RealCal_L1a_group",
+    "quantity": "rho",
+    "pool": "independent (DeepDRiD + FIVES)",
+    "k": 2,
+    "estimate": 0.3678676900726171,
+    "ci_lo": -0.11217945096781413,
+    "ci_hi": 0.7086980196177028,
+    "I2": 0.0,
+    "per_dataset": "deepdrid 0.53 (-0.25 to 0.80); fives 0.15 (-0.45 to 0.75)"
+   },
+   {
+    "method": "RealCal_L1a_group",
+    "quantity": "rho",
+    "pool": "all three (incl. DDR replication)",
+    "k": 3,
+    "estimate": 0.37888242038879055,
+    "ci_lo": -0.0035023820403683264,
+    "ci_hi": 0.6646013739885388,
+    "I2": 0.0,
+    "per_dataset": "deepdrid 0.53 (-0.25 to 0.80); fives 0.15 (-0.45 to 0.75); ddr_repl 0.40 (-0.27 to 0.80)"
+   },
+   {
+    "method": "RealCal_L1a_group",
+    "quantity": "diff_vs_B1",
+    "pool": "independent (DeepDRiD + FIVES)",
+    "k": 2,
+    "estimate": 0.1789345179973216,
+    "ci_lo": -0.17936430633135744,
+    "ci_hi": 0.5372333423260006,
+    "I2": 0.33120646127395215,
+    "per_dataset": "deepdrid 0.41 (-0.19 to 0.81); fives 0.04 (-0.30 to 0.39)"
+   },
+   {
+    "method": "RealCal_L1a_group",
+    "quantity": "diff_vs_B1",
+    "pool": "all three (incl. DDR replication)",
+    "k": 3,
+    "estimate": 0.10232813256871033,
+    "ci_lo": -0.16861253189868597,
+    "ci_hi": 0.3732687970361066,
+    "I2": 0.1131445470954772,
+    "per_dataset": "deepdrid 0.41 (-0.19 to 0.81); fives 0.04 (-0.30 to 0.39); ddr_repl -0.12 (-0.63 to 0.48)"
+   },
+   {
+    "method": "RealCal_L1a_std",
+    "quantity": "rho",
+    "pool": "independent (DeepDRiD + FIVES)",
+    "k": 2,
+    "estimate": 0.17901627289553937,
+    "ci_lo": -0.3010868181696463,
+    "ci_hi": 0.5867182174888621,
+    "I2": 0.0,
+    "per_dataset": "deepdrid 0.20 (-0.42 to 0.70); fives 0.15 (-0.45 to 0.75)"
+   },
+   {
+    "method": "RealCal_L1a_std",
+    "quantity": "rho",
+    "pool": "all three (incl. DDR replication)",
+    "k": 3,
+    "estimate": 0.2578513192875464,
+    "ci_lo": -0.13397652639105495,
+    "ci_hi": 0.5799567438925117,
+    "I2": 0.0,
+    "per_dataset": "deepdrid 0.20 (-0.42 to 0.70); fives 0.15 (-0.45 to 0.75); ddr_repl 0.40 (-0.27 to 0.80)"
+   },
+   {
+    "method": "RealCal_L1a_std",
+    "quantity": "diff_vs_B1",
+    "pool": "independent (DeepDRiD + FIVES)",
+    "k": 2,
+    "estimate": 0.05202542646313769,
+    "ci_lo": -0.22914040906409056,
+    "ci_hi": 0.3331912619903659,
+    "I2": 0.0,
+    "per_dataset": "deepdrid 0.09 (-0.35 to 0.64); fives 0.04 (-0.30 to 0.39)"
+   },
+   {
+    "method": "RealCal_L1a_std",
+    "quantity": "diff_vs_B1",
+    "pool": "all three (incl. DDR replication)",
+    "k": 3,
+    "estimate": 0.016799117315732484,
+    "ci_lo": -0.23376772689387576,
+    "ci_hi": 0.2673659615253407,
+    "I2": 0.0,
+    "per_dataset": "deepdrid 0.09 (-0.35 to 0.64); fives 0.04 (-0.30 to 0.39); ddr_repl -0.12 (-0.63 to 0.48)"
+   },
+   {
+    "method": "RealCal_L1b_condition",
+    "quantity": "rho",
+    "pool": "independent (DeepDRiD + FIVES)",
+    "k": 2,
+    "estimate": 0.13253605762593254,
+    "ci_lo": -0.31585984174650616,
+    "ci_hi": 0.5325386786927575,
+    "I2": 0.0,
+    "per_dataset": "deepdrid 0.24 (-0.38 to 0.68); fives -0.01 (-0.54 to 0.65)"
+   },
+   {
+    "method": "RealCal_L1b_condition",
+    "quantity": "rho",
+    "pool": "all three (incl. DDR replication)",
+    "k": 3,
+    "estimate": 0.22333957184233325,
+    "ci_lo": -0.14780164311423805,
+    "ci_hi": 0.5393430948889187,
+    "I2": 0.0,
+    "per_dataset": "deepdrid 0.24 (-0.38 to 0.68); fives -0.01 (-0.54 to 0.65); ddr_repl 0.39 (-0.25 to 0.78)"
+   },
+   {
+    "method": "RealCal_L1b_condition",
+    "quantity": "diff_vs_B1",
+    "pool": "independent (DeepDRiD + FIVES)",
+    "k": 2,
+    "estimate": -0.0348363034396164,
+    "ci_lo": -0.3209404526767361,
+    "ci_hi": 0.2512678457975033,
+    "I2": 0.0,
+    "per_dataset": "deepdrid 0.13 (-0.31 to 0.63); fives -0.13 (-0.49 to 0.23)"
+   },
+   {
+    "method": "RealCal_L1b_condition",
+    "quantity": "diff_vs_B1",
+    "pool": "all three (incl. DDR replication)",
+    "k": 3,
+    "estimate": -0.05196483627530932,
+    "ci_lo": -0.3095357168465931,
+    "ci_hi": 0.20560604429597448,
+    "I2": 0.0,
+    "per_dataset": "deepdrid 0.13 (-0.31 to 0.63); fives -0.13 (-0.49 to 0.23); ddr_repl -0.13 (-0.68 to 0.50)"
+   },
+   {
+    "method": "RealCal_L2_distribution",
+    "quantity": "rho",
+    "pool": "independent (DeepDRiD + FIVES)",
+    "k": 2,
+    "estimate": 0.01719803191965421,
+    "ci_lo": -0.6979987645176281,
+    "ci_hi": 0.7152184767673498,
+    "I2": 0.7376159233847388,
+    "per_dataset": "deepdrid -0.41 (-0.74 to 0.33); fives 0.43 (-0.22 to 0.77)"
+   },
+   {
+    "method": "RealCal_L2_distribution",
+    "quantity": "rho",
+    "pool": "all three (incl. DDR replication)",
+    "k": 3,
+    "estimate": 0.12753212408010797,
+    "ci_lo": -0.380586973605942,
+    "ci_hi": 0.5765014096985853,
+    "I2": 0.5461288483349119,
+    "per_dataset": "deepdrid -0.41 (-0.74 to 0.33); fives 0.43 (-0.22 to 0.77); ddr_repl 0.31 (-0.15 to 0.77)"
+   },
+   {
+    "method": "RealCal_L2_distribution",
+    "quantity": "diff_vs_B1",
+    "pool": "independent (DeepDRiD + FIVES)",
+    "k": 2,
+    "estimate": -0.0439886734586461,
+    "ci_lo": -0.8571365777813562,
+    "ci_hi": 0.769159230864064,
+    "I2": 0.6723459674676534,
+    "per_dataset": "deepdrid -0.53 (-1.11 to 0.50); fives 0.31 (-0.29 to 0.69)"
+   },
+   {
+    "method": "RealCal_L2_distribution",
+    "quantity": "diff_vs_B1",
+    "pool": "all three (incl. DDR replication)",
+    "k": 3,
+    "estimate": -0.062012450871077304,
+    "ci_lo": -0.558967456413029,
+    "ci_hi": 0.43494255467087445,
+    "I2": 0.43785269476438204,
+    "per_dataset": "deepdrid -0.53 (-1.11 to 0.50); fives 0.31 (-0.29 to 0.69); ddr_repl -0.21 (-0.70 to 0.66)"
+   }
+  ],
+  "precision": {
+   "B1_uniform_validity": {
+    "pooled_rho": 0.1154764211284381,
+    "max_compatible_rho": 0.5283101919402635
+   },
+   "B2_published": {
+    "pooled_diff": 0.084633888982985,
+    "max_compatible_gain_over_B1": 0.2643949817036149,
+    "max_compatible_loss_vs_B1": -0.0951272037376449
+   },
+   "RealCal_L1a_group": {
+    "pooled_diff": 0.1789345179973216,
+    "max_compatible_gain_over_B1": 0.5372333423260006,
+    "max_compatible_loss_vs_B1": -0.17936430633135744
+   },
+   "RealCal_L1a_std": {
+    "pooled_diff": 0.05202542646313769,
+    "max_compatible_gain_over_B1": 0.3331912619903659,
+    "max_compatible_loss_vs_B1": -0.22914040906409056
+   },
+   "RealCal_L1b_condition": {
+    "pooled_diff": -0.0348363034396164,
+    "max_compatible_gain_over_B1": 0.2512678457975033,
+    "max_compatible_loss_vs_B1": -0.3209404526767361
+   },
+   "RealCal_L2_distribution": {
+    "pooled_diff": -0.0439886734586461,
+    "max_compatible_gain_over_B1": 0.769159230864064,
+    "max_compatible_loss_vs_B1": -0.8571365777813562
+   }
+  }
+ },
+ "C_sample_size": {
+  "sample_size": [
+   {
+    "dataset": "deepdrid",
+    "target_ceiling": 0.8,
+    "training_noise": "current seeds",
+    "current_n_lq": 1058,
+    "current_ceiling": 0.676152604770762,
+    "patient_reliability_needed": 0.7192478173270654,
+    "size_multiplier": 2.2138969032801015,
+    "lq_images_needed": 2343.0
+   },
+   {
+    "dataset": "deepdrid",
+    "target_ceiling": 0.8,
+    "training_noise": "noise-free training (many seeds)",
+    "current_n_lq": 1058,
+    "current_ceiling": 0.676152604770762,
+    "patient_reliability_needed": 0.6400000000000001,
+    "size_multiplier": 1.5363121128245691,
+    "lq_images_needed": 1626.0
+   },
+   {
+    "dataset": "deepdrid",
+    "target_ceiling": 0.9,
+    "training_noise": "current seeds",
+    "current_n_lq": 1058,
+    "current_ceiling": 0.676152604770762,
+    "patient_reliability_needed": 0.8892478173270654,
+    "size_multiplier": 6.9386102833473515,
+    "lq_images_needed": 7342.0
+   },
+   {
+    "dataset": "deepdrid",
+    "target_ceiling": 0.9,
+    "training_noise": "noise-free training (many seeds)",
+    "current_n_lq": 1058,
+    "current_ceiling": 0.676152604770762,
+    "patient_reliability_needed": 0.81,
+    "size_multiplier": 3.6841168758194436,
+    "lq_images_needed": 3898.0
+   },
+   {
+    "dataset": "deepdrid",
+    "target_ceiling": NaN,
+    "training_noise": "seeds for seed-reliability 0.95",
+    "current_n_lq": 1058,
+    "current_ceiling": 0.676152604770762,
+    "patient_reliability_needed": NaN,
+    "size_multiplier": 4.905908096280089,
+    "lq_images_needed": NaN
+   },
+   {
+    "dataset": "fives",
+    "target_ceiling": 0.8,
+    "training_noise": "current seeds",
+    "current_n_lq": 67,
+    "current_ceiling": 0.39219625638925737,
+    "patient_reliability_needed": 0.7613976945244958,
+    "size_multiplier": 8.40374209765659,
+    "lq_images_needed": 564.0
+   },
+   {
+    "dataset": "fives",
+    "target_ceiling": 0.8,
+    "training_noise": "noise-free training (many seeds)",
+    "current_n_lq": 67,
+    "current_ceiling": 0.39219625638925737,
+    "patient_reliability_needed": 0.6400000000000001,
+    "size_multiplier": 4.681804420224041,
+    "lq_images_needed": 314.0
+   },
+   {
+    "dataset": "fives",
+    "target_ceiling": 0.9,
+    "training_noise": "current seeds",
+    "current_n_lq": 67,
+    "current_ceiling": 0.39219625638925737,
+    "patient_reliability_needed": 0.9313976945244957,
+    "size_multiplier": 35.75462617188822,
+    "lq_images_needed": 2396.0
+   },
+   {
+    "dataset": "fives",
+    "target_ceiling": 0.9,
+    "training_noise": "noise-free training (many seeds)",
+    "current_n_lq": 67,
+    "current_ceiling": 0.39219625638925737,
+    "patient_reliability_needed": 0.81,
+    "size_multiplier": 11.22709020507673,
+    "lq_images_needed": 753.0
+   },
+   {
+    "dataset": "fives",
+    "target_ceiling": NaN,
+    "training_noise": "seeds for seed-reliability 0.95",
+    "current_n_lq": 67,
+    "current_ceiling": 0.39219625638925737,
+    "patient_reliability_needed": NaN,
+    "size_multiplier": 7.875768757687576,
+    "lq_images_needed": NaN
+   }
+  ],
+  "assumption": "Spearman-Brown on the patient split-half reliability; seed and patient noise independent"
+ },
+ "D_why_realcal": {
+  "group_weights": {
+   "acquisition": 0.26626107058721404,
+   "blur": 3.743359409516302e-07,
+   "colour": 2.5069702106968374e-07,
+   "field": 5.828664499883142e-07,
+   "illumination": 6.388550716622031e-07,
+   "noise": 8.479609836604877e-08
+  },
+  "n_nonzero_groups": 1,
+  "realism_auroc_deepdrid": {
+   "level1": 0.999996426542215,
+   "level2": 0.847640267151704,
+   "uniform": 0.8703160902083683
+  },
+  "realism_auroc_mshf": {
+   "portable": {
+    "level1": 1.0,
+    "level2": 0.9996506245086907,
+    "uniform": 0.9999126561271727
+   },
+   "tabletop": {
+    "level1": 0.9997481742634098,
+    "level2": 0.9992445227902291,
+    "uniform": 0.9989926970536389
+   }
+  },
+  "spearman_group_synthetic_vs_real": {
+   "blur": {
+    "any": 0.041739130434782605,
+    "artifact": 0.023478260869565212,
+    "clarity": 0.10173913043478258,
+    "field": -0.10956521739130433
+   },
+   "noise": {
+    "any": 0.20173913043478262,
+    "artifact": 0.19217391304347822,
+    "clarity": 0.3478260869565217,
+    "field": -0.13391304347826086
+   },
+   "illumination": {
+    "any": 0.06434782608695652,
+    "artifact": 0.12869565217391304,
+    "clarity": 0.26086956521739124,
+    "field": 0.25217391304347825
+   },
+   "colour": {
+    "any": -0.3739130434782608,
+    "artifact": -0.2617391304347826,
+    "clarity": -0.08782608695652173,
+    "field": 0.21913043478260866
+   },
+   "acquisition": {
+    "any": 0.6582608695652173,
+    "artifact": 0.6443478260869565,
+    "clarity": 0.64,
+    "field": -0.11304347826086956
+   },
+   "field": {
+    "any": 0.11913043478260868,
+    "artifact": 0.021739130434782605,
+    "clarity": -0.009565217391304347,
+    "field": 0.2678260869565217
+   }
+  },
+  "matched_pairs": {
+   "blur vs clarity": 0.10173913043478258,
+   "field vs field": 0.2678260869565217,
+   "illumination vs artifact": 0.12869565217391304
+  },
+  "median_loss_synthetic_uniform": 0.04926922377937195,
+  "median_loss_real_any": 0.022156535850310598
+ },
+ "E_provenance": {
+  "lock_present": true,
+  "frozen_weights_present": true,
+  "lock_created": "2026-11-19 10:53:25",
+  "frozen_sha256_in_lock": "157cb34fda39b2ebac3e4b894fbf52be6ed02beacda522ccb5b57477c94776c1",
+  "frozen_sha256_now": "157cb34fda39b2ebac3e4b894fbf52be6ed02beacda522ccb5b57477c94776c1",
+  "hash_matches": true,
+  "code_hash": "4ed5a83af69cfca0",
+  "config_hash": "6283ee47b66a56c6",
+  "external_first_artefacts": {
+   "fives": {
+    "first_artefact": "2026-11-19 10:53:32",
+    "after_lock": true
+   },
+   "mshf": {
+    "first_artefact": "2026-11-19 11:42:39",
+    "after_lock": true
+   },
+   "ddr": {
+    "first_artefact": "2026-11-19 13:26:46",
+    "after_lock": true
+   }
+  },
+  "all_external_after_lock": true,
+  "caveat": "file modification times can be reset by later re-runs; the pipeline additionally refuses every external stage until the lock exists and matches the frozen-weights hash (realcal/prereg.py)"
+ },
+ "F_deferral_ddr": {
+  "prevalence_ungradable": 0.08418050171871572,
+  "score_uniform_5pct_sensitivity_ungradable": 0.2875760208514335,
+  "score_uniform_10pct_sensitivity_ungradable": 0.42137271937445697,
+  "score_uniform_20pct_sensitivity_ungradable": 0.5673327541268463,
+  "score_realcal_5pct_sensitivity_ungradable": 0.35447437011294525,
+  "score_realcal_10pct_sensitivity_ungradable": 0.5108601216333623,
+  "score_realcal_20pct_sensitivity_ungradable": 0.6446568201563857,
+  "per_config_median": {
+   "n_ungradable": 1151.0,
+   "n_confident_ungradable": 537.5,
+   "uncertainty_5pct_sensitivity_ungradable": 0.10251954821894005,
+   "score_uniform_5pct_catches_confident_ungradable": 0.26137937002422984,
+   "score_realcal_5pct_catches_confident_ungradable": 0.322648008027554,
+   "uncertainty_10pct_sensitivity_ungradable": 0.21894005212858386,
+   "score_uniform_10pct_catches_confident_ungradable": 0.40192307692307694,
+   "score_realcal_10pct_catches_confident_ungradable": 0.49075232645875255,
+   "uncertainty_20pct_sensitivity_ungradable": 0.43874891398783666,
+   "score_uniform_20pct_catches_confident_ungradable": 0.5434368644851173,
+   "score_realcal_20pct_catches_confident_ungradable": 0.6231710008147746
+  },
+  "note": "budgets are fractions of all DDR images flagged; uncertainty = lowest max-probability images of each DeepDRiD model (gradable images are subsampled in the entropy rows and re-weighted to the full DDR population)"
+ },
+ "F_deferral_deepdrid": {
+  "deepdrid": {
+   "lq_share_images": {
+    "median": 0.5319255907491202,
+    "q1": 0.5319255907491202,
+    "q3": 0.5319255907491202
+   },
+   "lq_share_missed": {
+    "median": 0.5628759507531504,
+    "q1": 0.5252545631055947,
+    "q3": 0.5976252670506979
+   },
+   "lq_share_errors": {
+    "median": 0.5572797593813543,
+    "q1": 0.5452946742535109,
+    "q3": 0.5843696426853711
+   },
+   "quality_gate_budget": {
+    "median": 0.5319255907491202,
+    "q1": 0.5319255907491202,
+    "q3": 0.5319255907491202
+   },
+   "quality_gate_missed_caught": {
+    "median": 0.5628759507531504,
+    "q1": 0.5252545631055947,
+    "q3": 0.5976252670506979
+   },
+   "uncertainty_at_quality_budget_missed_caught": {
+    "median": 0.7518068037542155,
+    "q1": 0.7156884829440828,
+    "q3": 0.810881693899755
+   },
+   "uncertainty_10pct_missed_caught": {
+    "median": 0.20732571139354314,
+    "q1": 0.19045215699996204,
+    "q3": 0.2444354063537531
+   },
+   "lq_then_uncertainty_10pct_missed_caught": {
+    "median": 0.18737856394382635,
+    "q1": 0.16668454980602976,
+    "q3": 0.20980392008907944
+   },
+   "uncertainty_20pct_missed_caught": {
+    "median": 0.38079839367792767,
+    "q1": 0.3353264903306028,
+    "q3": 0.40065721478911076
+   },
+   "lq_then_uncertainty_20pct_missed_caught": {
+    "median": 0.3090393878470859,
+    "q1": 0.279208742912176,
+    "q3": 0.3508071080572917
+   },
+   "uncertainty_30pct_missed_caught": {
+    "median": 0.5036959542286022,
+    "q1": 0.4551703500656966,
+    "q3": 0.5552922481453413
+   },
+   "lq_then_uncertainty_30pct_missed_caught": {
+    "median": 0.4234428964263345,
+    "q1": 0.39194017445325724,
+    "q3": 0.46628617313113324
+   }
+  },
+  "n_configs": 24,
+  "note": "fractions of each model's missed referable cases (false negatives at the frozen threshold) that a deferral policy would route to a human grader; random deferral catches a fraction equal to the budget"
+ }
+}

@@ -1,0 +1,7 @@
+# Edit these three lines only.
+# data_root   : folder that contains DeepDRiD/, FIVES/, MSHF/, DDR/
+# out_root    : every output (cache, runs, predictions, results, tables, figures, logs)
+# weights_root: local copies of all pretrained weights (filled by scripts/download_weights.sh)
+data_root: /path/to/data
+out_root: /path/to/data/realcal_runs
+weights_root: /path/to/data/weights

@@ -1,0 +1,146 @@
+# Backbone registry. Paths are relative to weights_root unless absolute.
+# kind: timm_hub  -> timm.create_model(timm_name, pretrained=True, pretrained_cfg_overlay={file: weights})
+#       timm_ckpt -> timm architecture + custom checkpoint (state_key / strip_prefixes)
+#       tv_resnet -> torchvision resnet50 + custom checkpoint
+#       hf_dinov3 -> transformers AutoModel from a local snapshot directory
+# mem_mb: estimated peak GPU memory (MB) at 224 px, batch 32, AMP. Scaled x3.5 at 448 px.
+backbones:
+  retfound:
+    family: retina
+    kind: timm_ckpt
+    timm_name: vit_large_patch16_224
+    global_pool: avg
+    weights: retfound/RETFound_mae_natureCFP.pth
+    hf_repo: YukunZhou/RETFound_mae_natureCFP
+    hf_file: RETFound_mae_natureCFP.pth
+    gated: true
+    state_key: model
+    strip_prefixes: ["module."]
+    rename: {"norm.": "fc_norm."}
+    drop_prefixes: ["decoder", "mask_token", "head."]
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    supports_lora: true
+    grad_checkpointing_ft: true
+    mem_mb: {lp: 3500, lora: 14000, ft: 22000}
+  flair:
+    family: retina
+    kind: tv_resnet
+    weights: flair/model.safetensors
+    hf_repo: jusiro2/FLAIR       # FLAIRModel.from_pretrained("jusiro2/FLAIR"); vision keys "vision_model.model.*"
+    hf_file: model.safetensors
+    gated: false
+    state_key: null
+    strip_prefixes: ["vision_model.model.", "module."]
+    # FLAIR's own preprocessing (flair/modeling/model.py, preprocess_image) only divides by 255:
+    # no ImageNet mean/std. Input size stays 224 like every other backbone (FLAIR itself uses 512).
+    mean: [0.0, 0.0, 0.0]
+    std: [1.0, 1.0, 1.0]
+    supports_lora: false
+    mem_mb: {lp: 2000, lora: 5000, ft: 7000}
+  visionfm:
+    family: retina
+    kind: timm_ckpt
+    timm_name: vit_base_patch16_224
+    global_pool: token
+    weights: visionfm/VFM_Fundus_weights.pth
+    url: "https://drive.google.com/file/d/13uWm0a02dCWyARUcrCdHZIcEgRfBmVA4/view?usp=sharing"  # VisionFM README, Fundus
+    state_key: teacher
+    strip_prefixes: ["module.", "backbone."]
+    rename: {}
+    drop_prefixes: ["head", "dino_head", "mim_head"]
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    supports_lora: true
+    mem_mb: {lp: 2000, lora: 6000, ft: 9000}
+  biomedclip:
+    family: medical
+    kind: timm_ckpt
+    timm_name: vit_base_patch16_224
+    global_pool: token
+    weights: biomedclip/open_clip_pytorch_model.bin
+    hf_repo: microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224
+    hf_file: open_clip_pytorch_model.bin
+    gated: false
+    state_key: null
+    keep_prefix: "visual.trunk."  # only the image tower is loaded
+    strip_prefixes: ["visual.trunk."]
+    rename: {}
+    drop_prefixes: ["head"]
+    mean: [0.48145466, 0.4578275, 0.40821073]
+    std: [0.26862954, 0.26130258, 0.27577711]
+    supports_lora: true
+    mem_mb: {lp: 2000, lora: 6000, ft: 9000}
+  dinov3:
+    family: general
+    # Same DINOv3 ViT-B/16 LVD-1689M weights, re-hosted by timm without the access gate
+    # (DINOv3 licence still applies). The Meta Transformers snapshot also works:
+    # kind: hf_dinov3, weights: dinov3/dinov3-vitb16-pretrain-lvd1689m, hf_repo: facebook/dinov3-vitb16-pretrain-lvd1689m
+    kind: timm_hub
+    timm_name: vit_base_patch16_dinov3.lvd1689m
+    weights: dinov3/model.safetensors
+    hf_repo: timm/vit_base_patch16_dinov3.lvd1689m
+    hf_file: model.safetensors
+    gated: false
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    supports_lora: true
+    mem_mb: {lp: 2000, lora: 6500, ft: 9500}
+  dinov2:
+    family: general
+    kind: timm_hub
+    timm_name: vit_base_patch14_dinov2.lvd142m
+    weights: dinov2/model.safetensors
+    hf_repo: timm/vit_base_patch14_dinov2.lvd142m
+    hf_file: model.safetensors
+    gated: false
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    supports_lora: true
+    mem_mb: {lp: 2000, lora: 6500, ft: 9500}
+  resnet50:
+    family: cnn
+    kind: timm_hub
+    timm_name: resnet50.tv_in1k
+    weights: resnet50/model.safetensors
+    hf_repo: timm/resnet50.tv_in1k
+    hf_file: model.safetensors
+    gated: false
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    supports_lora: false
+    mem_mb: {lp: 1500, lora: 4000, ft: 6000}
+  effnetb3:
+    family: cnn
+    kind: timm_hub
+    timm_name: efficientnet_b3.ra2_in1k
+    weights: effnetb3/model.safetensors
+    hf_repo: timm/efficientnet_b3.ra2_in1k
+    hf_file: model.safetensors
+    gated: false
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    supports_lora: false
+    amp_dtype: bfloat16          # fp16 overflowed under full fine-tuning (NaN probabilities)
+    mem_mb: {lp: 1500, lora: 5000, ft: 7500}
+
+# Analysis-only encoders (Level-2 distribution matching, realism test, quality detector)
+analysis_encoders:
+  convnext_base:
+    family: analysis
+    kind: timm_hub
+    timm_name: convnext_base.fb_in1k
+    weights: convnext_base/model.safetensors
+    hf_repo: timm/convnext_base.fb_in1k
+    hf_file: model.safetensors
+    gated: false
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    supports_lora: false
+    mem_mb: {lp: 2500, lora: 0, ft: 0}
+
+families:
+  retina: [retfound, flair, visionfm]
+  medical: [biomedclip]
+  general: [dinov3, dinov2]
+  cnn: [resnet50, effnetb3]

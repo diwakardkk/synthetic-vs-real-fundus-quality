@@ -1,0 +1,150 @@
+{
+  "b3_choices": {
+    "biomedclip": "jpeg_s5",
+    "dinov2": "jpeg_s4",
+    "dinov3": "jpeg_s4",
+    "effnetb3": "jpeg_s4",
+    "flair": "jpeg_s4",
+    "resnet50": "jpeg_s5",
+    "retfound": "jpeg_s3",
+    "visionfm": "jpeg_s4"
+  },
+  "group_weights": {
+    "acquisition": 0.26626107058721404,
+    "blur": 3.743359409516302e-07,
+    "colour": 2.5069702106968374e-07,
+    "field": 5.828664499883142e-07,
+    "illumination": 6.388550716622031e-07,
+    "noise": 8.479609836604877e-08
+  },
+  "intercept_1a": -0.008463638828993486,
+  "intercept_only": {
+    "level1a_full_fit": false,
+    "level1a_lobo_folds": "0/8",
+    "level1a_std_full_fit": false,
+    "level1a_std_lobo_folds": "0/8",
+    "level1b_full_fit": false,
+    "level1b_lobo_folds": "0/8"
+  },
+  "lambda_1a": 0.000774263682681127,
+  "lambda_1b": 0.005994842503189409,
+  "level1a_std": {
+    "group_weights_z": {
+      "acquisition": 0.005538287732596222,
+      "blur": 7.700699005785918e-10,
+      "colour": 1.6197409698495e-10,
+      "field": 1.9994018060139224e-09,
+      "illumination": 2.2414927869730164e-08,
+      "noise": 5.697060476692077e-10
+    },
+    "intercept": 0.022675805751792576,
+    "lobo_rel_lambdas": {
+      "biomedclip": 0.3981071705534973,
+      "dinov2": 0.3981071705534973,
+      "dinov3": 0.25118864315095824,
+      "effnetb3": 0.6309573444801936,
+      "flair": 0.6309573444801936,
+      "resnet50": 0.25118864315095824,
+      "retfound": 0.3981071705534973,
+      "visionfm": 1.0
+    },
+    "rel_lambda": 0.3981071705534973
+  },
+  "level2": {
+    "gamma": 0.000512053316924721,
+    "mmd2_pi": 0.022160490326449733,
+    "mmd2_uniform": 0.049244676310040425
+  },
+  "lobo_lambdas_1a": {
+    "biomedclip": 0.000774263682681127,
+    "dinov2": 0.000774263682681127,
+    "dinov3": 0.002154434690031882,
+    "effnetb3": 0.000774263682681127,
+    "flair": 0.000774263682681127,
+    "resnet50": 0.000774263682681127,
+    "retfound": 0.000774263682681127,
+    "visionfm": 0.016681005372000592
+  },
+  "lofo": {
+    "kendall": -0.11594202898550725,
+    "kendall_ci": [
+      -0.46219608879492585,
+      0.385229885057471
+    ],
+    "mae": 0.012190592370077075,
+    "mae_ci": [
+      0.009245052752993742,
+      0.03266719287870375
+    ],
+    "pra": 0.4420289855072464,
+    "pra_ci": [
+      0.26890195560253705,
+      0.6926149425287355
+    ],
+    "spearman": -0.18956521739130433,
+    "spearman_ci": [
+      -0.6258010363668093,
+      0.5153493311415716
+    ],
+    "top5": 0.4
+  },
+  "noise_ceiling": {
+    "ceiling_rho_combined": 0.676152604770762,
+    "ceiling_rho_patient": 0.7324139282300355,
+    "ceiling_rho_seed": 0.959558326873846,
+    "dataset": "deepdrid",
+    "loss_range": [
+      -0.012384795174300467,
+      0.04602492023755045
+    ],
+    "loss_sd_between_configs": 0.01363785594224314,
+    "median_seed_sd": 0.005220444008338657,
+    "n_configs": 24,
+    "n_patients": 499,
+    "n_seeds": 3,
+    "n_splits": 200,
+    "reliability_combined": 0.45718234493828636,
+    "reliability_patient": 0.5364301622653516,
+    "reliability_seed": 0.9207521826729347,
+    "seed_pairwise_spearman": 0.7947826086956521,
+    "split_half_spearman_iqr": [
+      0.26413043478260867,
+      0.4932608695652173
+    ],
+    "split_half_spearman_median": 0.36652173913043473,
+    "stratum": "any",
+    "train_dataset": "deepdrid"
+  },
+  "realism": {
+    "level1": {
+      "auroc": 0.999996426542215,
+      "auroc_ci": [
+        0.999983387578561,
+        1.0
+      ],
+      "mmd2": 0.26119744777679443,
+      "n_real": 1058,
+      "n_synth": 1058
+    },
+    "level2": {
+      "auroc": 0.847640267151704,
+      "auroc_ci": [
+        0.8257959080220644,
+        0.868005830596257
+      ],
+      "mmd2": 0.021506428718566895,
+      "n_real": 1058,
+      "n_synth": 1058
+    },
+    "uniform": {
+      "auroc": 0.8703160902083683,
+      "auroc_ci": [
+        0.8502986789462,
+        0.887568287478508
+      ],
+      "mmd2": 0.04962289333343506,
+      "n_real": 1058,
+      "n_synth": 1058
+    }
+  }
+}

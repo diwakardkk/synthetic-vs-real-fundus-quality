@@ -1,0 +1,5 @@
+Dataset,Images,Patients,HQ,LQ,Ungradable,Role
+deepdrid,1989,499,931,1058,0,development
+fives,800,800,592,208,0,external
+mshf,792,792,369,423,0,external
+ddr,13673,13673,12522,1151,1151,external

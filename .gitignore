@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
+# data, weights and run outputs are never committed
+data/
+weights/
+realcal_runs/
+*.pt
+*.pth
+*.safetensors
+*.parquet
+*.tgz
+*.zip
+*.rar
+# paper sources are kept elsewhere
+*.tex
+*.bib
+*.pdf

@@ -1,0 +1,27 @@
+# MSHF (external 2). Layout verified from the local archive "MSHF dataset 2.0.zip":
+#   <root>/MSHF dataset 2.0/Original/CFP/{DR-XJU,DR-ZJU,Glaucoma,Healthy}/*.jpg   (500, tabletop)
+#   <root>/MSHF dataset 2.0/Original/Portable_camera/{Local1,Local2}/*.jpg        (302, portable)
+#   <root>/MSHF dataset 2.0/Original/UWF-mosaic/*.jpg   (ultra-widefield: skipped)
+#   <root>/MSHF dataset 2.0/AI-use/{train,test}          (re-packaged copies: skipped)
+#   <root>/MSHF dataset 2.0/MSHF_quality_scores.xlsx
+# The workbook has one sheet per folder plus a combined "gold standard" sheet (named DR-ZJU,
+# header on the 2nd row) that lists all 1,302 images. Rows are taken from primary_sheet first,
+# then any other sheet for images still missing.
+name: mshf
+root: MSHF
+task: quality_only
+n_classes: 0
+quality_xlsx_name: MSHF_quality_scores.xlsx
+primary_sheet: DR-ZJU
+quality_value_columns: [illumination, clarity, contrast, overall]   # columns 2-5 after the image name
+good_value: 1
+camera_folders:
+  tabletop: [Original/CFP]
+  portable: [Original/Portable_camera]
+skip_folders: [UWF-mosaic, AI-use, __MACOSX]
+image_extensions: [".jpg", ".jpeg", ".png", ".tif", ".JPG"]
+# The gold-standard sheet holds formulas (=IF(a1+a2+a3>1,1,0)) whose cached results are all 0 in the
+# distributed file, so the loader recomputes the 3-annotator majority vote from this workbook and uses
+# the per-folder sheets only for images it does not cover (agreement between the two is logged).
+individual_xlsx_glob: "Individual_scores*.xlsx"
+drop_exact_duplicates: true

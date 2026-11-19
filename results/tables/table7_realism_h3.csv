@@ -1,0 +1,18 @@
+Test set,Analysis,Mix,Value (95% CI),MMD2
+DeepDRiD real LQ,real vs synthetic AUROC,level1,1.000 (1.000 to 1.000),0.2612
+DeepDRiD real LQ,real vs synthetic AUROC,level2,0.848 (0.826 to 0.868),0.0215
+DeepDRiD real LQ,real vs synthetic AUROC,uniform,0.870 (0.850 to 0.888),0.0496
+MSHF portable LQ,real vs synthetic AUROC,level1,1.000 (1.000 to 1.000),0.3124
+MSHF portable LQ,real vs synthetic AUROC,level2,1.000 (0.999 to 1.000),0.2016
+MSHF portable LQ,real vs synthetic AUROC,uniform,1.000 (1.000 to 1.000),0.1950
+MSHF tabletop LQ,real vs synthetic AUROC,level1,1.000 (0.999 to 1.000),0.1783
+MSHF tabletop LQ,real vs synthetic AUROC,level2,0.999 (0.998 to 1.000),0.1790
+MSHF tabletop LQ,real vs synthetic AUROC,uniform,0.999 (0.997 to 1.000),0.1399
+MSHF camera=portable,quality detection AUROC,uniform,0.444 (0.377 to 0.511),--
+MSHF camera=portable,quality detection AUROC,realcal,0.714 (0.654 to 0.775),DeLong P=0.000
+MSHF camera=tabletop,quality detection AUROC,uniform,0.668 (0.618 to 0.718),--
+MSHF camera=tabletop,quality detection AUROC,realcal,0.422 (0.368 to 0.475),DeLong P=0.000
+MSHF overall,quality detection AUROC,uniform,0.624 (0.585 to 0.663),--
+MSHF overall,quality detection AUROC,realcal,0.595 (0.555 to 0.635),DeLong P=0.211
+DDR overall,quality detection AUROC,uniform,0.732 (0.713 to 0.750),--
+DDR overall,quality detection AUROC,realcal,0.776 (0.758 to 0.794),DeLong P=0.000

@@ -1,0 +1,37 @@
+# 15 corruptions x 5 severities = 75 conditions. Parameters defined at 224 px;
+# spatial parameters (marked spatial: true) scale linearly with image size.
+corruptions:
+  defocus:             {group: blur,         spatial: true,  params: [1, 2, 3, 4, 6]}
+  motion:              {group: blur,         spatial: true,  params: [3, 5, 9, 13, 17]}
+  gaussian_noise:      {group: noise,        spatial: false, params: [0.02, 0.04, 0.06, 0.08, 0.12]}
+  shot_noise:          {group: noise,        spatial: false, params: [500, 250, 100, 60, 30]}
+  over_exposure:       {group: illumination, spatial: false, params: [0.05, 0.10, 0.15, 0.20, 0.30]}
+  under_exposure:      {group: illumination, spatial: false, params: [0.05, 0.10, 0.15, 0.20, 0.30]}
+  uneven_illumination: {group: illumination, spatial: false, params: [0.20, 0.35, 0.50, 0.65, 0.80]}
+  haze:                {group: illumination, spatial: false, params: [0.10, 0.20, 0.30, 0.40, 0.55]}
+  contrast_loss:       {group: colour,       spatial: false, params: [0.85, 0.70, 0.55, 0.40, 0.25]}
+  gamma_shift:         {group: colour,       spatial: false, params: [0.2, 0.4, 0.6, 0.8, 1.0]}
+  colour_cast:         {group: colour,       spatial: false, params: [0.05, 0.10, 0.15, 0.20, 0.30]}
+  jpeg:                {group: acquisition,  spatial: false, params: [50, 30, 20, 12, 7]}
+  low_resolution:      {group: acquisition,  spatial: false, params: [1.5, 2, 3, 4, 6]}
+  off_centre:          {group: field,        spatial: false, params: [0.05, 0.10, 0.15, 0.20, 0.30]}
+  occlusion:           {group: field,        spatial: false, params: [0.02, 0.05, 0.10, 0.15, 0.25]}
+
+groups: [blur, noise, illumination, colour, acquisition, field]
+
+# Baseline B2: published-style (MedMNIST-C-like) fundus set, built from the same operators.
+# Condition names are prefixed "b2_".
+b2:
+  defocus_blur:    {op: defocus,        spatial: true,  params: [1, 2, 3, 5, 7]}
+  motion_blur:     {op: motion,         spatial: true,  params: [5, 9, 13, 17, 21]}
+  brightness_up:   {op: over_exposure,  spatial: false, params: [0.10, 0.20, 0.30, 0.40, 0.50]}
+  brightness_down: {op: under_exposure, spatial: false, params: [0.10, 0.20, 0.30, 0.40, 0.50]}
+  contrast_down:   {op: contrast_loss,  spatial: false, params: [0.75, 0.60, 0.45, 0.30, 0.20]}
+  jpeg:            {op: jpeg,           spatial: false, params: [40, 25, 15, 10, 5]}
+  pixelate:        {op: pixelate,       spatial: false, params: [1.5, 2, 3, 4, 5]}
+  gaussian_noise:  {op: gaussian_noise, spatial: false, params: [0.03, 0.06, 0.09, 0.12, 0.15]}
+
+# haze veil
+haze_blur_sigma_frac: 0.08     # Gaussian sigma as fraction of image size
+haze_warm_grey: [0.80, 0.72, 0.62]
+haze_brighten: 0.35

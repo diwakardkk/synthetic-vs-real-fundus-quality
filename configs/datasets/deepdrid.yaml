@@ -1,0 +1,57 @@
+# DeepDRiD regular fundus images (development dataset).
+# Layout verified from github.com/deepdrdoc/DeepDRiD:
+#   <root>/regular_fundus_images/regular-fundus-training/regular-fundus-training.csv
+#   <root>/regular_fundus_images/regular-fundus-training/regular-fundus-source-training.csv
+#   <root>/regular_fundus_images/regular-fundus-training/Images/<patient>/<image_id>.jpg
+#   (same for regular-fundus-validation)
+#   <root>/regular_fundus_images/Online-Challenge1&2-Evaluation/Challenge1_labels.xlsx  (image_id, DR_Levels)
+#   <root>/regular_fundus_images/Online-Challenge1&2-Evaluation/Challenge2_labels.xlsx  (image_id, Overall quality, Artifact, Clarity, Field definition)
+name: deepdrid
+root: DeepDRiD/regular_fundus_images
+task: binary                 # referable DR = grade >= referable_min_grade
+referable_min_grade: 2
+n_classes: 2
+class_names: [non_referable, referable]
+
+subsets:
+  - name: training
+    dir: regular-fundus-training
+    labels_csv: regular-fundus-training.csv
+    source_csv: regular-fundus-source-training.csv
+  - name: validation
+    dir: regular-fundus-validation
+    labels_csv: regular-fundus-validation.csv
+    source_csv: regular-fundus-source-validation.csv
+  - name: test
+    dir: "Online-Challenge1&2-Evaluation"
+    grade_xlsx: Challenge1_labels.xlsx
+    quality_xlsx: Challenge2_labels.xlsx
+
+columns:
+  image_id: image_id
+  patient_id: patient_id
+  left_grade: left_eye_DR_Level
+  right_grade: right_eye_DR_Level
+  patient_grade: patient_DR_Level
+  test_grade: DR_Levels
+  overall: Overall quality
+  clarity: Clarity
+  field: Field definition
+  artifact: Artifact
+  source: Source
+
+image_id_regex: '^(?P<patient>\d+)_(?P<lat>[lr])(?P<view>\d)$'
+view_map: {"1": macula, "2": disc, "3": other, "4": other}   # a few images carry suffix 3/4
+# Quality is graded per eye in DeepDRiD (both views of an eye share the score in ~99% of eyes), so true
+# within-eye HQ/LQ pairs barely exist. 'patient' = contralateral pairs: patients with one all-HQ eye and
+# one all-LQ eye of the same DR grade; correctness at eye level (eye referable if any image is positive).
+pair_level: patient            # patient | eye
+laterality_map: {l: L, r: R}
+
+quality:
+  hq_rule: {column: overall, equals: 1}
+  lq_artifact: {column: artifact, op: ">=", value: 6}
+  lq_clarity: {column: clarity, op: "<=", value: 4}
+  lq_field: {column: field, op: "<=", value: 4}
+
+image_extensions: [".jpg", ".jpeg", ".png", ".JPG", ".PNG"]

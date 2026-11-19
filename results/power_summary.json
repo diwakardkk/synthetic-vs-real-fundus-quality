@@ -1,0 +1,10 @@
+{
+  "baseline_rho_for_diff": 0.3,
+  "icc": 0.3,
+  "min_detectable_diff_80": NaN,
+  "min_detectable_rho_80": 0.9,
+  "n_clusters": 8,
+  "n_configs": 24,
+  "n_sim": 2000,
+  "noise_sd": 0.015712640504855845
+}

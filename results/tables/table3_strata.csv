@@ -1,0 +1,7 @@
+Stratum,Images,Patients,Referable,% referable
+HQ,931,326,427,45.9
+LQ any,1058,357,435,41.1
+LQ artifact,469,242,223,47.5
+LQ clarity,178,120,100,56.2
+LQ field,51,44,26,51.0
+Contralateral HQ/LQ eye pairs (same grade),--,101,--,--

@@ -1,0 +1,16 @@
+selected_by,config,prevalence,note,missed_per_1000_LQ,unnecessary_per_1000_LQ
+clean_only,visionfm/lora,0.05,max HQ AUROC,8.5823754789272,110.8079186730873
+clean_only,visionfm/lora,0.1,max HQ AUROC,17.1647509578544,104.97592295345113
+clean_only,visionfm/lora,0.2,max HQ AUROC,34.3295019157088,93.31193151417878
+oracle,flair/ft,0.05,max observed LQ AUROC (upper bound),8.045977011494255,130.63135366506148
+oracle,flair/ft,0.1,max observed LQ AUROC (upper bound),16.09195402298851,123.75601926163718
+oracle,flair/ft,0.2,max observed LQ AUROC (upper bound),32.18390804597702,110.00535045478861
+uniform,visionfm/lora,0.05,max (HQ AUROC - predicted loss),8.5823754789272,110.8079186730873
+uniform,visionfm/lora,0.1,max (HQ AUROC - predicted loss),17.1647509578544,104.97592295345113
+uniform,visionfm/lora,0.2,max (HQ AUROC - predicted loss),34.3295019157088,93.31193151417878
+realcal,visionfm/lora,0.05,max (HQ AUROC - predicted loss),8.5823754789272,110.8079186730873
+realcal,visionfm/lora,0.1,max (HQ AUROC - predicted loss),17.1647509578544,104.97592295345113
+realcal,visionfm/lora,0.2,max (HQ AUROC - predicted loss),34.3295019157088,93.31193151417878
+realcal_std,visionfm/lora,0.05,max (HQ AUROC - predicted loss),8.5823754789272,110.8079186730873
+realcal_std,visionfm/lora,0.1,max (HQ AUROC - predicted loss),17.1647509578544,104.97592295345113
+realcal_std,visionfm/lora,0.2,max (HQ AUROC - predicted loss),34.3295019157088,93.31193151417878

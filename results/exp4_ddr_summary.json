@@ -1,0 +1,25 @@
+{
+  "entropy": {
+    "median_entropy_gradable": 0.22784341129892477,
+    "median_entropy_ungradable": 0.35665016021987506,
+    "median_share_ungradable_confident": 0.4669852302345786
+  },
+  "quality_detection": {
+    "overall": {
+      "auroc_realcal": 0.7764569631124286,
+      "auroc_realcal_ci": [
+        0.7584504294620995,
+        0.7944634967627577
+      ],
+      "auroc_uniform": 0.7316770789231978,
+      "auroc_uniform_ci": [
+        0.7129804885598667,
+        0.7503736692865288
+      ],
+      "delong_diff": 0.044779884189230845,
+      "delong_p": 2.5315278450438485e-05,
+      "n": 13673,
+      "n_pos": 1151
+    }
+  }
+}

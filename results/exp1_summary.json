@@ -1,0 +1,107 @@
+{
+  "delta_real_any_excl_grades_1_2_median": 0.026959973190191056,
+  "delta_real_any_median": 0.022156535850310688,
+  "delta_real_any_range": [
+    -0.012384795174300356,
+    0.04602492023755045
+  ],
+  "delta_real_by_defect_median": {
+    "any": 0.022156535850310688,
+    "artifact": 0.027602865961052603,
+    "clarity": -0.013933766164445416,
+    "field": -0.00245260875822928
+  },
+  "delta_real_sens_any_median": 0.04632246718170968,
+  "gee": {
+    "ci": [
+      0.5593223446338345,
+      0.9254172962691276
+    ],
+    "method": "GEE exchangeable, patient clusters",
+    "n": 47736,
+    "or": 0.7194487972843879,
+    "p": 0.010364190874581566
+  },
+  "grade_standardized": {
+    "any": {
+      "by": "grade",
+      "delta_raw_median": 0.022156535850310632,
+      "delta_std_median": 0.041535249793038964,
+      "delta_std_range": [
+        0.01383581192285055,
+        0.06407853043092637
+      ],
+      "effective_n_lq_median": 986.8985312455355,
+      "n_configs": 24,
+      "rank_agreement_raw_vs_std": 0.9286956521739129,
+      "stratum": "any"
+    },
+    "artifact": {
+      "by": "grade",
+      "delta_raw_median": 0.027602865961052603,
+      "delta_std_median": 0.056388816460819946,
+      "delta_std_range": [
+        0.016715823282959397,
+        0.08249449475341086
+      ],
+      "effective_n_lq_median": 406.82956059183175,
+      "n_configs": 24,
+      "rank_agreement_raw_vs_std": 0.886086956521739,
+      "stratum": "artifact"
+    },
+    "clarity": {
+      "by": "grade",
+      "delta_raw_median": -0.013933766164445416,
+      "delta_std_median": 0.02673937038830554,
+      "delta_std_range": [
+        -0.014993274207615648,
+        0.07178171742686079
+      ],
+      "effective_n_lq_median": 106.44312356120615,
+      "n_configs": 24,
+      "rank_agreement_raw_vs_std": 0.7243478260869565,
+      "stratum": "clarity"
+    },
+    "field": {
+      "by": "grade",
+      "delta_raw_median": -0.002452608758229391,
+      "delta_std_median": 0.010459702209977328,
+      "delta_std_range": [
+        -0.0359536850914326,
+        0.10597838997678832
+      ],
+      "effective_n_lq_median": 42.36771134012002,
+      "n_configs": 24,
+      "rank_agreement_raw_vs_std": 0.8730434782608695,
+      "stratum": "field"
+    }
+  },
+  "label_noise_median_loss_by_rate": {
+    "0.05": 0.04303053720612447,
+    "0.1": 0.08504930960823325,
+    "0.15": 0.12745520552097372
+  },
+  "mixed_model": {
+    "ci": [
+      0.6006068591848158,
+      0.6501745932960913
+    ],
+    "log_or": -0.4701645250167052,
+    "log_or_sd": 0.020229682615957742,
+    "method": "BinomialBayesMixedGLM (VB)",
+    "n": 47736,
+    "or": 0.624899448232538
+  },
+  "n_configs": 24,
+  "within_eye_pairs_pooled": {
+    "both_correct": 2146,
+    "both_wrong": 94,
+    "hq_only_correct": 103,
+    "lq_only_correct": 81,
+    "mcnemar_p": 0.12135284705944045,
+    "n_pairs": 2424,
+    "note": "pooled over configurations (descriptive; pairs are reused across configurations)",
+    "pair_level": "patient"
+  },
+  "within_grade_acc_loss_median": 0.04398701097930553
+}

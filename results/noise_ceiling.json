@@ -1,0 +1,27 @@
+{
+  "ceiling_rho_combined": 0.676152604770762,
+  "ceiling_rho_patient": 0.7324139282300355,
+  "ceiling_rho_seed": 0.959558326873846,
+  "dataset": "deepdrid",
+  "loss_range": [
+    -0.012384795174300467,
+    0.04602492023755045
+  ],
+  "loss_sd_between_configs": 0.01363785594224314,
+  "median_seed_sd": 0.005220444008338657,
+  "n_configs": 24,
+  "n_patients": 499,
+  "n_seeds": 3,
+  "n_splits": 200,
+  "reliability_combined": 0.45718234493828636,
+  "reliability_patient": 0.5364301622653516,
+  "reliability_seed": 0.9207521826729347,
+  "seed_pairwise_spearman": 0.7947826086956521,
+  "split_half_spearman_iqr": [
+    0.26413043478260867,
+    0.4932608695652173
+  ],
+  "split_half_spearman_median": 0.36652173913043473,
+  "stratum": "any",
+  "train_dataset": "deepdrid"
+}

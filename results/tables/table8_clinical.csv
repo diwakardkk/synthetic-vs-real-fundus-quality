@@ -1,0 +1,22 @@
+Stratum,Prevalence,"Missed per 1,000 (median, range)","Unnecessary per 1,000 (median)"
+HQ,5%,9.7 (3.8 to 20.6),108.4
+HQ,10%,19.5 (7.7 to 41.1),102.7
+HQ,20%,39.0 (15.3 to 82.3),91.3
+LQ,5%,11.8 (7.0 to 18.4),116.1
+LQ,10%,23.5 (14.0 to 36.9),110.0
+LQ,20%,47.0 (28.0 to 73.7),97.8
+"LQ, selected by clean_only (visionfm/lora)",5%,8.6,110.8
+"LQ, selected by clean_only (visionfm/lora)",10%,17.2,105.0
+"LQ, selected by clean_only (visionfm/lora)",20%,34.3,93.3
+"LQ, selected by oracle (flair/ft)",5%,8.0,130.6
+"LQ, selected by oracle (flair/ft)",10%,16.1,123.8
+"LQ, selected by oracle (flair/ft)",20%,32.2,110.0
+"LQ, selected by uniform (visionfm/lora)",5%,8.6,110.8
+"LQ, selected by uniform (visionfm/lora)",10%,17.2,105.0
+"LQ, selected by uniform (visionfm/lora)",20%,34.3,93.3
+"LQ, selected by realcal (visionfm/lora)",5%,8.6,110.8
+"LQ, selected by realcal (visionfm/lora)",10%,17.2,105.0
+"LQ, selected by realcal (visionfm/lora)",20%,34.3,93.3
+"LQ, selected by realcal_std (visionfm/lora)",5%,8.6,110.8
+"LQ, selected by realcal_std (visionfm/lora)",10%,17.2,105.0
+"LQ, selected by realcal_std (visionfm/lora)",20%,34.3,93.3

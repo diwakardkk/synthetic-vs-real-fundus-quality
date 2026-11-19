@@ -1,0 +1,13 @@
+analysis,rho,diff,power
+single,0.3,0.0,0.181
+single,0.4,0.0,0.282
+single,0.5,0.0,0.387
+single,0.6,0.0,0.488
+single,0.7,0.0,0.6095
+single,0.8,0.0,0.7105
+single,0.9,0.0,0.806
+difference,0.3,0.1,0.067
+difference,0.3,0.2,0.0965
+difference,0.3,0.3,0.142
+difference,0.3,0.4,0.2035
+difference,0.3,0.5,0.2575

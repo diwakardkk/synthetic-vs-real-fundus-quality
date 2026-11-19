@@ -1,0 +1,26 @@
+# FIVES (external 1). Layout verified from the local archive:
+#   <root>/train/Original/<n>_<A|D|G|N>.png   (600)
+#   <root>/test/Original/<n>_<A|D|G|N>.png    (200)
+#   <root>/Quality Assessment.xlsx  sheets Train/Test, columns Disease, Number, IC, Blur, LC
+# The archive extracts into a folder named "FIVES A Fundus Image Dataset for AI-based Vessel
+# Segmentation"; the loader searches below data_root/FIVES for the "train/Original" folder.
+name: fives
+root: FIVES
+task: multiclass
+n_classes: 4
+class_names: [normal, amd, dr, glaucoma]
+class_from_suffix: {N: 0, A: 1, D: 2, G: 3}
+filename_regex: '^(?P<num>\d+)_(?P<cls>[ADGN])$'
+split_dirs: {train: train/Original, test: test/Original}
+quality_xlsx: Quality Assessment.xlsx
+quality_sheets: {train: Train, test: Test}
+quality_columns:
+  disease: Disease
+  number: Number
+  illumination: IC      # illumination and colour
+  clarity: Blur
+  contrast: LC          # low contrast
+# Observed values are 0/1 with 1 the majority (459/600 train images are 1,1,1); 1 is taken to mean
+# "good". Confirm with `inspect` and the FIVES paper; flip here if needed.
+good_value: 1
+image_extensions: [".png", ".jpg", ".jpeg", ".tif"]
